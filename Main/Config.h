@@ -15,8 +15,8 @@
 #define US_LEFT_ECHO 26  
 
 // Right Sensor
-#define US_RIGHT_TRIG 14
-#define US_RIGHT_ECHO 27 
+#define US_RIGHT_TRIG 27
+#define US_RIGHT_ECHO 14 
 
 // ================= MOTOR DRIVER (TB6612) =================
 
