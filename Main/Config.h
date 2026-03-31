@@ -8,7 +8,7 @@
 
 // Front Sensor
 #define US_FRONT_TRIG 32
-#define US_FRONT_ECHO 33 
+#define US_FRONT_ECHO 14 
 
 // Left Sensor
 #define US_LEFT_TRIG 25
@@ -16,7 +16,7 @@
 
 // Right Sensor
 #define US_RIGHT_TRIG 27
-#define US_RIGHT_ECHO 14 
+#define US_RIGHT_ECHO 33
 
 // ================= MOTOR DRIVER (TB6612) =================
 
