@@ -20,12 +20,12 @@
 
 // ================= MOTOR DRIVER (TB6612) =================
 
-// Left Motors
-#define MOTOR_L_PWM   18
-#define MOTOR_L_IN1   19
-#define MOTOR_L_IN2   23
+// Front Motors
+#define MOTOR_F_PWM   18
+#define MOTOR_F_IN1   19
+#define MOTOR_F_IN2   23
 
-// Right Motors
+// Rear Motors
 #define MOTOR_R_PWM   5
 #define MOTOR_R_IN1   17
 #define MOTOR_R_IN2   16
