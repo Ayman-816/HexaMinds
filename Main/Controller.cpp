@@ -1,6 +1,6 @@
-#include <PS5Controller.h>
+//#include <PS5Controller.h>
 #include "Config.h"
 
 void initController(){
-  PS5.begin(""); // ESP MAC
+  //PS5.begin(""); // ESP MAC
 }
