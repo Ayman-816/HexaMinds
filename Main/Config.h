@@ -1,10 +1,19 @@
 #pragma once
 
-// ================= I2C (PCA9685 + MPU6050) =================
+/**************Control Parameters*********/
+
+// Gripper , Use then with control gripper function
+#define Open  1
+#define Close 0
+
+
+/***************Pin definitions***********/ 
+
+//  I2C (PCA9685 + MPU6050) 
 #define I2C_SDA 21
 #define I2C_SCL 22
 
-// ================= ULTRASONIC SENSORS =================
+//  ULTRASONIC SENSORS 
 
 // Front Sensor
 #define US_FRONT_TRIG 32
@@ -18,7 +27,7 @@
 #define US_RIGHT_TRIG 27
 #define US_RIGHT_ECHO 33
 
-// ================= MOTOR DRIVER (TB6612) =================
+//  MOTOR DRIVER (TB6612) 
 
 // Front Motors
 #define MOTOR_F_PWM   18
@@ -30,6 +39,6 @@
 #define MOTOR_R_IN1   17
 #define MOTOR_R_IN2   16
 
-// ================= OPTIONAL / FUTURE =================
+//  OPTIONAL / FUTURE 
 #define FREE_1 4
 #define FREE_2 13
