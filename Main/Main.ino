@@ -1,5 +1,6 @@
 #include "Controller.h"
 #include "Modes.h"
+#include "Arm.h"
 
 void setup() {
   Serial.begin(115200);
@@ -8,5 +9,5 @@ void setup() {
 }
 
 void loop() {
-
+  updateArm(); // DO NOT TOUCH THIS LINE !!! 
 }

@@ -4,19 +4,23 @@
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
 
+// Servo Channel Mapping on PCA9685
 enum ServoChannel {
-  SHOULDER, // 0
-  WRIST,    // 1
-  GRIPPER   // 2
-}; //As if u made 3 spearate #defines ya karim call them in the function no big deal :)
+  SHOULDER = 0, 
+  WRIST    = 1,    
+  GRIPPER  = 2   
+}; 
 
+// Core Functions
 void setupPCA();
+void updateArm(); // مهم فشخخخخخخ حطها ف أول اللووب و كمل شغلك عادي 
 void writeMicros(int channel, int us);
-void moveArm(int S_angle, int W_angle, int G_speed);
+int angleToMicros(int angle);
+void moveArm(int S_angle, int W_angle, int speed);// speed range :- 20 - 60
 void controlGripper(uint8_t state); // 0 -> Close , 1 -> Open
 void returnHome();
 void setOffset(int S_angle, int W_angle, int G_speed);
-int angleToMicros(int angle);
+
 
 
 /*
@@ -27,11 +31,11 @@ How Will the ARM work :- 3 main movements
 
 Additional functions :- 
   setupPCA      (initalize the I2C address)
-  returnHome    (To return to home position DUHH!)
-  moveArm     (Smooth movement of the servos via a loop so that the arm doesnt jitter :) )
-  setOffset     (Line up the servos)
+  updateArm     (Crutial for non-blocking code must be put on top of the loop)
   angleToMicros (Convert microSeconds to angle to be easier to work with)
-
+  returnHome    (To return to home position DUHH!)
+  setOffset     (Line up the servos)
+  
 Servo Control Functions With PCA library:
   << writeMicros(channel, us) >> 
     1000us => 0 degrees for 180 servos, Full Speed CW for 360 servo
